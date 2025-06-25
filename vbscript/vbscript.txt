@@ -1,0 +1,116 @@
+<IEMODE> = 7
+<IEMODE> = 8
+<IEMODE> = 9
+<IEMODE> = 10
+<IEMODE> = 11
+<DECLVAR> = dim _var<INT>
+#<DECLVAR VARNAME> = dim VARNAME
+#<DECLVAR VARNAME VARTYPE>  = dim VARNAME = new VARTYPE
+#<DECLVAR VARNAME ARRAY>  = redim VARNAME(<int min=0 max=1000>)
+#<DEFVAR VARTYPE> = new VARTYPE
+#<DEFVAR ARRAY> = <ARRAY>
+#<DEFVAR VARNAME ARRAY> = redim VARNAME(<int min=0 max=1000>)
+#<DEFVAR VARNAME ARRAY SIZE> = redim VARNAME(SIZE)
+<DEFVAR> = new <VARTYPE>
+<VARTYPE> = <INT>
+<VARTYPE> = <COMOBJECT>
+<VARTYPE> = <ARRAY>
+<VARTYPE> = <STRING>
+<VARTYPE> = <REGEXP>
+<VARTYPE> = <USERCLASS>
+<VARTYPE> = <DATE>
+<INT> = <int min=0 max=4294967296>
+<COMOBJECT> = CreateObject("Scripting.Dictionary")
+<COMOBJECT> = CreateObject("adodb.connection")
+<COMOBJECT> = CreateObject("Adodb.Record")
+<COMOBJECT> = CreateObject("ADODB.RecordSet")
+<COMOBJECT> = CreateObject("Msxml2.XSLTemplate.6.0")
+<COMOBJECT> = CreateObject("Msxml2.FreeThreadedDOMDocument.6.0")
+<COMOBJECT> = CreateObject("Msxml2.DOMDocument.6.0")
+<COMOBJECT> = CreateObject("msxml2.saxattributes.6.0")
+<ARRAY SIZE> = ARRAY(SIZE)
+<ARRAY> = ARRAY(<int min=0 max=1000>)
+<STRING> = String("aaabbbcccddd")
+<STRING> = "ddddcccbba"
+<REGEXP> = new RegExp
+<DATE> = CDate
+
+!begin functionmap
+
+<ARRAY> = Filter
+<ARRAY> = IsArray
+<ARRAY> = Join
+<ARRAY> = LBound
+<ARRAY> = Split
+<ARRAY> = UBound
+<STRING> = InStr
+<STRING> = InStrRev
+<STRING> = LCase
+<STRING> = Left
+<STRING> = Len
+<STRING> = LTrim
+<STRING> = RTrim
+<STRING> = Trim
+<STRING> = Mid
+<STRING> = Replace
+<STRING> = Right
+<STRING> = Space
+<STRING> = StrComp
+<STRING> = String
+<STRING> = StrReverse
+<STRING> = UCase
+<MATH> = Abs
+<MATH> = Atn
+<MATH> = Cos
+<MATH> = Exp
+<MATH> = Hex
+<MATH> = Int
+<MATH> = Fix
+<MATH> = Log
+<MATH> = Oct
+<MATH> = Rnd
+<MATH> = Sgn
+<MATH> = Sin
+<MATH> = Sqr
+<MATH> = Tan
+<CONVERT> = Asc
+<CONVERT> = CBool
+<CONVERT> = CByte
+<CONVERT> = CCur
+<CONVERT> = CDate
+<CONVERT> = CDbl
+<CONVERT> = Chr
+<CONVERT> = CInt
+<CONVERT> = CLng
+<CONVERT> = CSng
+<CONVERT> = CStr
+<CONVERT> = Hex
+<CONVERT> = Oct
+<FORMAT> = FormatCurrency
+<FORMAT> = FormatDateTime
+<FORMAT> = FormatNumber
+<FORMAT> = FormatPercent
+<OTHERFUNCTIONS> = CreateObject
+<OTHERFUNCTIONS> = Eval
+<OTHERFUNCTIONS> = IsEmpty
+<OTHERFUNCTIONS> = IsEmpty
+<OTHERFUNCTIONS> = IsNumeric
+<OTHERFUNCTIONS> = IsObject
+<OTHERFUNCTIONS> = RGB
+<OTHERFUNCTIONS> = Round
+<OTHERFUNCTIONS> = ScriptEngine
+<OTHERFUNCTIONS> = ScriptEngineBuildVersion
+<OTHERFUNCTIONS> = ScriptEngineMajorVersion
+<OTHERFUNCTIONS> = ScriptEngineMinorVersion
+<OTHERFUNCTIONS> = TypeName
+<OTHERFUNCTIONS> = VarType
+<RegExp> = Execute
+<RegExp> = Replace
+<RegExp> = Test
+
+!end functionmap
+
+!begin statementsmap
+<FUNCTION> = Call
+<ARRAY> = Erase
+!end statementsmap

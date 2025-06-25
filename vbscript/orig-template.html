@@ -1,0 +1,185 @@
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+</head>
+<body>
+<script type="text/vbscript">
+
+Dim doinit
+
+Dim depth
+Dim maxdepth
+depth = 0
+maxdepth = 4
+
+Dim runcountf1
+Dim runcounts1
+Dim runcountf2
+Dim runcounts2
+runcountf1 = 0
+runcounts1 = 0
+runcountf2 = 0
+runcounts2 = 0
+
+doinit = 0
+Dim var1(10)
+Dim var2(10, 10)
+Dim var3
+Dim var4
+Dim var5
+Dim var6
+Dim var7
+Dim var8
+Dim var9
+Dim var10
+Dim var11
+Dim var12
+Dim var13
+Dim var14
+Dim var15
+
+
+Dim property1
+Dim property2
+Dim property3
+Dim property4
+Dim property5
+
+On Error Resume Next
+
+Sub main()
+On Error Resume Next
+' msgbox("in main")
+
+<vbfuzzer>
+
+' msgbox("done")
+End Sub
+
+Function function1(arg1, arg2, arg3, arg4, arg5)
+On Error Resume Next
+If runcountf1>2 Then
+  Exit Function
+End If
+if depth > maxdepth Then
+  Exit Function
+End If
+runcountf1 = runcountf1 + 1
+depth = depth + 1
+' msgbox("in f1")
+
+<vbfuzzer>
+
+' msgbox("end f1")
+depth = depth - 1
+End Function
+
+
+Class class1
+  Public property1, property2, property3, property4, property5
+
+  Public Function f(arg1, arg2, arg3, arg4, arg5)
+    On Error Resume Next
+    If runcount11>2 Then
+      Exit Function
+    End If
+    if depth > maxdepth Then
+      Exit Function
+    End If
+    depth = depth + 1
+    runcount11 = runcount11 + 1
+    ' msgbox "in member function"
+
+<vbfuzzer>
+
+    ' msgbox "end member function"
+    depth = depth - 1
+  End Function
+
+  Public Default Property Get x
+    On Error Resume Next
+    If runcount12>2 Then
+      x = 1
+      Exit Property
+    End If
+    if depth > maxdepth Then
+      x = 1
+      Exit Property
+    End If
+    depth = depth + 1
+    runcount12 = runcount12 + 1
+    ' msgbox "default"
+
+<vbfuzzer>
+
+    ' msgbox "end default"
+    depth = depth - 1
+  End Property
+
+  Private Sub Class_Initialize()
+    On Error Resume Next
+    If doinit=0 Then
+      Exit Sub
+    End If
+    If runcount13>2 Then
+      Exit Sub
+    End If
+    if depth > maxdepth Then
+      Exit Sub
+    End If
+    depth = depth + 1
+    runcount13 = runcount13 + 1
+    ' msgbox "init"
+
+<vbfuzzer>
+
+    ' msgbox "end init"
+    depth = depth - 1
+
+  End Sub
+
+  Private Sub Class_Terminate()
+    On Error Resume Next
+    If runcount14>2 Then
+      Exit Sub
+    End If
+    if depth > maxdepth Then
+      Exit Sub
+    End If
+    depth = depth + 1
+    runcount14 = runcount14 + 1
+    ' msgbox "terminate"
+
+<vbfuzzer>
+
+    ' msgbox "end terminate"
+    depth = depth - 1
+  End Sub
+
+End Class
+
+
+
+var3 = Array(10)
+var4 = "aaaaaaaaaa"
+set var5 = new class1
+set var6 = new class2
+set var7 = new class3
+set var8 = new class4
+set var9 = CreateObject("Scripting.Dictionary")
+set var10 = document.createEvent("CustomEvent")
+set var11 = CreateObject("adodb.connection")
+set var12 = new Regexp
+var13 = String(&h400000, "A")
+var14 = String(&h400000, "B")
+var15 = Array(1, 2, 3)
+
+doinit = 1
+
+main()
+
+</script>
+</body>
+</html>
+

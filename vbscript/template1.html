@@ -1,0 +1,27 @@
+
+<html>
+<head>
+<meta http-equiv="x-ua-compatible" content="<IEMODE>"> 
+</head>
+<body>
+<script type="text/vbscript">
+
+Class class1
+
+Private Sub Class_Terminate()
+on error resume next
+set var1 = 
+End Sub
+
+End Class
+
+DIM var1, a, b
+Set var1 = ARRAY(10)
+var1(0) = new class1
+a = <ARRAY>(var1)
+b = new class1
+erase var1
+
+</script>
+</body>
+</html>
