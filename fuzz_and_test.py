@@ -83,6 +83,11 @@ def main():
     timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     log_js = args.log_js or f"js-crashes-{timestamp}.log"
 
+     # ── start with a clean log file ───────────────────────────
+    if os.path.exists(log_js):                     # <── NEW
+        os.remove(log_js)                          # <── NEW
+    # ──────────────────────────────────────────────────────────
+
     # pipeline
     generate_samples(args.generator, args.output_dir, args.count)
     convert_html_to_js(args.extractor, args.output_dir, args.output_js_dir)
