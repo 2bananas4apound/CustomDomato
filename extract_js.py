@@ -32,7 +32,7 @@ def extract_scripts_from_dir(input_dir, output_dir):
         if js_code.strip():
             with open(out_path, 'w', encoding='utf-8') as f:
                 f.write(js_code)
-            print(f"Extracted JS from {filename} → {out_name}")
+            print(f"Extracted JS from {filename} -- > {out_name}")
         else:
             print(f"No <script> tags found in {filename}")
 
